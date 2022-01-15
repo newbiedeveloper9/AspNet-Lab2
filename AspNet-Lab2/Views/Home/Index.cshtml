@@ -1,0 +1,16 @@
+﻿@model FormRequest
+
+<form asp-action="FormView" method="get">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.DisplayNameFor(x => x.FirstName)
+    <input asp-for="FirstName"/><br/>
+    @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" }) <br/>
+
+    @Html.DisplayNameFor(x => x.Birthdate)
+    <input asp-for="Birthdate"/><br/>
+    @Html.ValidationMessageFor(m => m.Birthdate, "", new { @class = "text-danger" }) <br/>
+    <br/>
+
+    <button type="submit">Wyslij</button>
+</form>
+<br/>
